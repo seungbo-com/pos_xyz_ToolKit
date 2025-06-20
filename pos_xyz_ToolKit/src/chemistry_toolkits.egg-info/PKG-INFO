@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: chemistry-toolkits
+Version: 0.1.0
+Summary: A simple python script to read/edit POSCAR/XYZ files
+Author-email: Seungbo Hong <mirrorbucher@gmail.com>
+Project-URL: Homepage, https://github.com/seungbo-com/pos_xyz_ToolKit
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pos-xyz-ToolKit
+
+`pos_xyz_ToolKit` is a simple python package for edit the widly used chemical structure file format. (POSCAR,XYZ). Additionally, collecting two/three-body correlation (vector, angle) features are included. 
+
+## Installation
+
+Install the package via **source**.
+
+```bash
+git clone https://github.com/seungbo-com/pos_xyz_ToolKit
+cd pos_xyz_ToolKit
+pip install .
+```
