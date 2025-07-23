@@ -34,4 +34,21 @@ def three_body_corr(vec_ab, vec_bc):
     ab_norm = np.linalg.norm(vec_ab); bc_norm = np.linalg.norm(vec_bc)
     vec_ab/=ab_norm;vec_bc/=bc_norm
         
-    return np.arccos(np.einsum("i,i->",vec_ab , vec_bc) / (ab_norm * bc_norm)) * 180.0 / np.pi
+    return np.arccos(np.einsum("i,i->",vec_ab , vec_bc)) * 180.0 / np.pi
+
+def rotation_twoVec(a_v,b_v):
+    """
+    Computing Rotation Matrix (Rodrigues' Rotation Formula)
+    """
+    a_
+    k_m = np.cross(a_v,b_v) # k_matrix
+    
+    skew_K_m = np.asarray([
+        [0, -k_m[2],k_m[1]],
+        [k_m[2], 0,-k_m[0]],
+        [-k_m[1], k_m[0],0],
+    ],dtype=float)
+    
+    angle_ab = three_body_corr(a_v,b_v) * np.pi / 180.0
+
+    return np.identity(3) + np.sin(angle_ab) * skew_K_m + (1 - np.cos(angle_ab)) * np.dot(skew_K_m,skew_K_m)

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "chemistry-toolkits"
-version = "0.1.0"
+version = "0.2.0"
 description = "A simple python script to read/edit POSCAR/XYZ files"
 authors = [
     {name = "Seungbo Hong", email = "mirrorbucher@gmail.com"}

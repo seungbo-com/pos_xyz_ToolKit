@@ -34,4 +34,4 @@ def three_body_corr(vec_ab, vec_bc):
     ab_norm = np.linalg.norm(vec_ab); bc_norm = np.linalg.norm(vec_bc)
     vec_ab/=ab_norm;vec_bc/=bc_norm
         
-    return np.arccos(np.einsum("i,i->",vec_ab , vec_bc) / (ab_norm * bc_norm)) * 180.0 / np.pi
+    return np.arccos(np.einsum("i,i->",vec_ab , vec_bc)) * 180.0 / np.pi
